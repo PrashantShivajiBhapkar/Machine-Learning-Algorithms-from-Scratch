@@ -2,12 +2,10 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-
 class Regression:
     def __init__(self, n_iterations, learning_rate):
         self.n_iterations = n_iterations
         self.learning_rate = learning_rate
-
 
     def initialie_weights(self, n_features):
         self.theta1 = np.zeros((n_features, 1))
@@ -17,7 +15,6 @@ class Regression:
         self.mse = []
         self.initialie_weights(X.shape[1])
         self.gradient_descent(self.n_iterations, X, y)
-
 
     def gradient_descent(self, n_iterations, X, y):
         for _ in range(n_iterations):
